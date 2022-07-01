@@ -1,1 +1,16 @@
-# PrinterPSManagement
+# Printers Management by PowerShell
+
+## Stag/Add dirver packets into Windows Driver Store
+```
+pnputil /add-driver c:\oem\*.inf
+```
+> A driver package must be staged to the Driver Store before the package can be used to install any devices.
+
+Staging a drive packet into the Driver Store performs verified and validated.
+* Verifying integration: INF file must have a _CatelogFile_ directive in the *Version* section; Any file referenced by INF file; _Catalog file_ signed with a trusted signature. 
+* Validating: User permission; Syntax of driver files.
+
+```
+Add-PrinterDriver 
+```
+

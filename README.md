@@ -13,7 +13,7 @@ pnputil /add-driver <the-path-to-driver>\*.inf
 Example 1: pnputil /add-driver c:\Users\Administrator\Download\hp\eng\laster5l.inf    #Add a driver file
 Example 2: pnputil /add-driver c:\Users\Administrator\Download\hp\eng\*.inf           #Add multiple driver files
 ```
-> [_PnPUtil Syntax] (https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax)
+> [*PnPUtil* Syntax](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax)
 
 _Staging_ performs **verification** and **validation** on the driver packets:
 * Verifying integration: INF file must have a _CatelogFile_ directive in the *Version* section; Any file referenced by INF file; _Catalog file_ signed with a trusted signature. 
@@ -36,4 +36,4 @@ Add a local printer with the driver and an assigned printing port:
 ```
 Add-Printer -Name "printer-name" -DriverName "the-staged-driver-name" -PortName "printing-port"
 ```
-
+> [*PrintManagement* cmdlets](https://docs.microsoft.com/en-us/powershell/module/printmanagement/?view=windowsserver2022-ps)

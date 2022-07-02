@@ -1,6 +1,10 @@
 # Printers Management by PowerShell
 
-**1. Manage dirver packets (_.inf_ files) in _Windows Driver Store_**
+`PnPUtil` stages drivers (INF files) --> `Add-PrinterDriver` --> `Add-Printer` with `-DriverName`
+
+---
+
+**1.  _PnPUtil.exe_ mamages dirver packets (_.inf_ files)**
 
 **_PnPUtil.exe_** is a cmd tool that lets an administrator perform actions on driver packages, like add, installation, deletion, and looking for.
 A driver package must be staged to the _Driver Store_ before the package can be used to install any devices.
@@ -20,10 +24,16 @@ The `oem*.inf` stored in `C:\Windows\INF_ folder`; The added driver packets save
 
 ---
 
-**2. _PrintManagement_ cmdlets**
+**2.  _PrintManagement_ cmdlets**
 
-Add a local printer:
+Look for the staged driver name inside \*.inf file within _Driver Store_ folder.
+Add the staged driver into _printer drivers_ list:
 ```
-Add-PrinterDriver 
+Add-PrinterDriver -Name "the-staged-driver-name"
+```
+
+Add a local printer with the driver and an assigned printing port:
+```
+Add-Printer -Name "printer-name" -DriverName "the-staged-driver-name" -PortName "printing-port"
 ```
 

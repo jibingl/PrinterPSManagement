@@ -1,6 +1,6 @@
 # Printers Management by PowerShell
 
-## Stag/Add dirver packets into Windows Driver Store
+1. Stag/Add dirver packets into Windows Driver Store
 ```
 pnputil /add-driver c:\oem\*.inf
 ```

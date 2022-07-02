@@ -4,6 +4,7 @@
 ```
 pnputil /add-driver c:\oem\*.inf
 ```
+> PnPUtil (PnPUtil.exe) is a cmd tool that lets an administrator perform actions on driver packages, like add, installation, deletion, and looking for.
 > A driver package must be staged to the Driver Store before the package can be used to install any devices.
 
 Staging a drive packet into the Driver Store performs verified and validated.
